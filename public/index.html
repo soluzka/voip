@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple VoIP App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple VoIP Application</h1>
+        <div class="call-container">
+            <div class="video-container">
+                <video id="localVideo" autoplay muted></video>
+                <div id="remoteVideos"></div>
+            </div>
+            <div class="controls">
+                <button id="startButton">Start Call</button>
+                <button id="endButton" disabled>End Call</button>
+                <div class="room-input">
+                    <input type="text" id="roomId" placeholder="Enter Room ID">
+                    <button id="joinButton">Join Room</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/simple-peer@9.11.1/dist/simplepeer.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
